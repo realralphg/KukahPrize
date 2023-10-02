@@ -1,6 +1,12 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <header class="header row justify-between items-center">
+    <header
+      :class="
+        this.$router.currentRoute.value.name === 'home'
+          ? 'header row justify-between items-center'
+          : 'header rel row justify-between items-center'
+      "
+    >
       <div class="container">
         <div class="navbar">
           <div class="">
@@ -12,32 +18,32 @@
           <nav>
             <ul>
               <li>
-                <q-btn @click="goto('timeline')" class="nav_item" flat no-caps>
+                <q-btn @click="goto('home')" class="nav_item" flat no-caps>
                   Home
                 </q-btn>
               </li>
               <li>
-                <q-btn @click="goto('timeline')" class="nav_item" flat no-caps>
+                <q-btn @click="goto('intro')" class="nav_item" flat no-caps>
                   Introduction
                 </q-btn>
               </li>
               <li>
-                <q-btn @click="goto('overview')" class="nav_item" flat no-caps>
+                <q-btn @click="goto('winners')" class="nav_item" flat no-caps>
                   The winners
                 </q-btn>
               </li>
               <li>
-                <q-btn @click="goto('faq')" class="nav_item" flat no-caps>
+                <q-btn @click="goto('event')" class="nav_item" flat no-caps>
                   Event
                 </q-btn>
               </li>
               <li>
-                <q-btn @click="goto('faq')" class="nav_item" flat no-caps>
+                <q-btn @click="goto('gallery')" class="nav_item" flat no-caps>
                   Gallery
                 </q-btn>
               </li>
               <li>
-                <q-btn @click="goto('faq')" class="nav_item" flat no-caps>
+                <q-btn @click="goto('judges')" class="nav_item" flat no-caps>
                   Meet the Judges
                 </q-btn>
               </li>
@@ -118,10 +124,10 @@ export default defineComponent({
     },
 
     goto(arg) {
-      let body = document.querySelector("body");
-      let nav = document.querySelector(".header");
-      body.classList.remove("no_scroll");
-      nav.classList.remove("active");
+      // let body = document.querySelector("body");
+      // let nav = document.querySelector(".header");
+      // body.classList.remove("no_scroll");
+      // nav.classList.remove("active");
       document.getElementById(arg).scrollIntoView({ behavior: "smooth" });
     },
   },

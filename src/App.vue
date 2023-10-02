@@ -1,11 +1,20 @@
 <template>
+  <div class="loading" data-loading>
+    <img :src="logo" alt="" />
+  </div>
   <router-view />
 </template>
 
-<script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'App'
-})
+<script setup>
+import { onMounted } from "vue";
+import logo from "./assets/logo.svg";
+name: "App",
+  onMounted(() => {
+    // PRELOADING
+    const loadingElement = document.querySelector("[data-loading]");
+    window.addEventListener("load", function () {
+      loadingElement.classList.add("loaded");
+      document.body.classList.remove("active");
+    });
+  });
 </script>

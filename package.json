@@ -7,17 +7,20 @@
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0",
+    "icons": "icongenie generate -i logo.png --skip-trim --theme-color",
     "dev": "quasar dev",
     "build": "quasar build"
   },
   "dependencies": {
-    "axios": "^1.2.1",
-    "vue-i18n": "^9.0.0",
-    "pinia": "^2.0.11",
     "@quasar/extras": "^1.16.4",
+    "@splidejs/vue-splide": "^0.6.12",
+    "axios": "^1.2.1",
     "core-js": "^3.6.5",
+    "gsap": "^3.12.2",
+    "pinia": "^2.0.11",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
+    "vue-i18n": "^9.0.0",
     "vue-router": "^4.0.0"
   },
   "devDependencies": {
