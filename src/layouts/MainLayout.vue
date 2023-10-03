@@ -22,34 +22,39 @@
                   Home
                 </q-btn>
               </li>
-              <li v-if="this.$router.currentRoute.value.name !== 'home'">
-                <q-btn :to="{ name: 'home' }" class="nav_item" flat no-caps>
-                  Home
-                </q-btn>
-              </li>
+
               <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('intro')" class="nav_item" flat no-caps>
                   Introduction
                 </q-btn>
               </li>
-              <li v-if="this.$router.currentRoute.value.name !== 'home'">
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('winners')" class="nav_item" flat no-caps>
                   The winners
                 </q-btn>
               </li>
-              <li v-if="this.$router.currentRoute.value.name !== 'home'">
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('event')" class="nav_item" flat no-caps>
                   Event
                 </q-btn>
               </li>
-              <li v-if="this.$router.currentRoute.value.name !== 'home'">
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('gallery')" class="nav_item" flat no-caps>
                   Gallery
                 </q-btn>
               </li>
-              <li v-if="this.$router.currentRoute.value.name !== 'home'">
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('judges')" class="nav_item" flat no-caps>
                   Meet the Judges
+                </q-btn>
+              </li>
+
+              <li
+                v-if="this.$router.currentRoute.value.name !== 'home'"
+                class="partner"
+              >
+                <q-btn :to="{ name: 'home' }" class="nav_item" flat no-caps>
+                  Home
                 </q-btn>
               </li>
               <li class="partner">
@@ -58,7 +63,16 @@
             </ul>
           </nav>
 
-          <div>
+          <div style="gap: 1rem" class="row items-center no-wrap">
+            <q-btn
+              v-if="this.$router.currentRoute.value.name !== 'home'"
+              :to="{ name: 'home' }"
+              class="nav_item contact"
+              flat
+              no-caps
+            >
+              Home
+            </q-btn>
             <q-btn class="nav_item contact" flat no-caps>
               Partner with us
             </q-btn>
@@ -232,7 +246,7 @@ header.active {
 }
 @media (max-width: 1000px) {
   .navbar nav ul {
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 @media (max-width: 950px) {

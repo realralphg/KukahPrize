@@ -261,14 +261,14 @@
           </div>
 
           <div>
-            <q-btn flat no-wrap no-caps>
+            <!-- <q-btn flat no-wrap no-caps>
               Read more
               <span
                 class="bg-secondary q-ml-md"
                 style="width: 38.596px; height: 38.596px; border-radius: 50%"
                 ><img src="../assets/arrow.svg" alt=""
               /></span>
-            </q-btn>
+            </q-btn> -->
           </div>
         </div>
       </div>

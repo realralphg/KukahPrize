@@ -147,7 +147,7 @@ let router = useRouter();
   .clip {
     position: absolute;
     z-index: 1;
-    bottom: -5%;
+    bottom: -4%;
     svg {
       display: block;
     }
@@ -204,7 +204,21 @@ section.article {
 @media (max-width: 800px) {
   .manzo {
     .clip {
-      bottom: -7%;
+      bottom: -6%;
+    }
+  }
+}
+@media (max-width: 780px) {
+  .manzo {
+    .clip {
+      bottom: -5%;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .manzo {
+    .clip {
+      bottom: -6%;
     }
   }
 }
@@ -222,10 +236,6 @@ section.article {
         }
       }
     }
-
-    .clip {
-      bottom: -10%;
-    }
   }
   section.article {
     grid-template-areas:
@@ -238,6 +248,34 @@ section.article {
       h3 {
         font-size: 20.28px;
       }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .manzo {
+    .clip {
+      bottom: -7%;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .manzo {
+    .clip {
+      bottom: -9%;
+    }
+  }
+}
+@media (max-width: 370px) {
+  .manzo {
+    .clip {
+      bottom: -8%;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .manzo {
+    .clip {
+      bottom: -9%;
     }
   }
 }
