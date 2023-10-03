@@ -277,4 +277,34 @@ section.article {
     line-height: 2.5;
   }
 }
+
+@media (max-width: 500px) {
+  section.intro {
+    .maintext {
+      font-size: 25px;
+    }
+  }
+  .manzo {
+    .container {
+      .left {
+        h3 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  section.article {
+    grid-template-areas:
+      "img"
+      " text1"
+      " text2"
+      "text3 ";
+
+    div:nth-child(4) {
+      h3 {
+        font-size: 20.28px;
+      }
+    }
+  }
+}
 </style>
