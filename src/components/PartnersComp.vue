@@ -16,10 +16,28 @@
           <h6 class="q-mb-md">Please contact us.</h6>
 
           <div class="q-mb-md">
-            <p><span class="placeText">Call:</span> <span>08035356090</span></p>
+            <p>
+              <span class="placeText">Call:</span>
+              <span>
+                <a
+                  class="text-primary"
+                  target="_blank"
+                  href="tel:+2348035356090"
+                >
+                  08035356090</a
+                >
+              </span>
+            </p>
             <p>
               <span class="placeText">Email: </span>
-              <span>hello@thekukahprize.org</span>
+              <span
+                ><a
+                  class="text-primary"
+                  target="_blank"
+                  href="mailto:hello@thekukahprize.org"
+                  >hello@thekukahprize.org</a
+                ></span
+              >
             </p>
             <p>
               <span class="placeText">Website: </span>

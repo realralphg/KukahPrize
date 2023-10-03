@@ -878,9 +878,9 @@ onMounted(() => {
   let tl = gsap.timeline({ delay: 1 });
   tl.from("header", {
     duration: 0.6,
-    delay: 1.45,
-    ease: "power2. out",
-    y: -60,
+    delay: 1.1,
+    ease: "power2. in",
+    y: -75,
   });
   tl.from(".subtext", {
     duration: 0.6,

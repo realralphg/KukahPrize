@@ -17,32 +17,37 @@
 
           <nav>
             <ul>
-              <li>
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('home')" class="nav_item" flat no-caps>
                   Home
                 </q-btn>
               </li>
-              <li>
+              <li v-if="this.$router.currentRoute.value.name !== 'home'">
+                <q-btn :to="{ name: 'home' }" class="nav_item" flat no-caps>
+                  Home
+                </q-btn>
+              </li>
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('intro')" class="nav_item" flat no-caps>
                   Introduction
                 </q-btn>
               </li>
-              <li>
+              <li v-if="this.$router.currentRoute.value.name !== 'home'">
                 <q-btn @click="goto('winners')" class="nav_item" flat no-caps>
                   The winners
                 </q-btn>
               </li>
-              <li>
+              <li v-if="this.$router.currentRoute.value.name !== 'home'">
                 <q-btn @click="goto('event')" class="nav_item" flat no-caps>
                   Event
                 </q-btn>
               </li>
-              <li>
+              <li v-if="this.$router.currentRoute.value.name !== 'home'">
                 <q-btn @click="goto('gallery')" class="nav_item" flat no-caps>
                   Gallery
                 </q-btn>
               </li>
-              <li>
+              <li v-if="this.$router.currentRoute.value.name !== 'home'">
                 <q-btn @click="goto('judges')" class="nav_item" flat no-caps>
                   Meet the Judges
                 </q-btn>
@@ -54,12 +59,7 @@
           </nav>
 
           <div>
-            <q-btn
-              :to="{ name: 'contact' }"
-              class="nav_item contact"
-              flat
-              no-caps
-            >
+            <q-btn class="nav_item contact" flat no-caps>
               Partner with us
             </q-btn>
 
@@ -112,7 +112,7 @@ export default defineComponent({
     $route(to, from) {
       let nav = document.querySelector(".header");
       let body = document.querySelector("body");
-      console.log(to, from);
+      // console.log(to, from);
       if (to.name !== from.name) {
         body.classList.remove("no_scroll");
         nav.classList.remove("active");

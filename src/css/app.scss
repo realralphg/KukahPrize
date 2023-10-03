@@ -910,11 +910,12 @@ section.event.vr {
   border-radius: 104.681px;
   border: 1.047px solid #1b3459;
   background: #fff;
-  padding: 16.749px;
+  padding: 10.749px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  width: fit-content;
+  width: 50%;
   img {
     width: 20px;
     height: 20px;
@@ -1420,7 +1421,7 @@ footer {
   }
 
   .placeText {
-    font-size: 14.024px;
+    font-size: 18.024px;
   }
   section.winners .winner div:nth-child(1) p {
     padding: 3.128px 10.36px 2.452px 10.811px;
@@ -1554,6 +1555,14 @@ footer {
       "img"
       "div";
   }
+
+  section.event.started h2 img {
+    left: 40%;
+  }
+
+  section.press.honorary.partner {
+    padding: 10px 0;
+  }
 }
 @media (max-width: 500px) {
   section {
@@ -1582,6 +1591,14 @@ footer {
   }
   section.quotes .quote::after {
     bottom: -33%;
+  }
+
+  section.quotes.partnerships .quote::after {
+    bottom: -37%;
+  }
+
+  section.press .left h5 {
+    font-size: 20.249px;
   }
 
   .hero .centerimg {
@@ -1618,6 +1635,20 @@ footer {
 
   .dialog .q-dialog__inner--minimized > div {
     max-width: 100% !important;
+  }
+
+  section.press.honorary.partner {
+    padding: 10px 0;
+
+    h3 {
+      font-size: 25.247px;
+    }
+    p span:last-of-type {
+      font-size: 15px;
+    }
+    p span:first-of-type {
+      font-size: 16px;
+    }
   }
 }
 @media (max-width: 400px) {

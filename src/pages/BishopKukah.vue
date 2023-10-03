@@ -118,7 +118,7 @@ let router = useRouter();
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-
+  margin-top: -5%;
   .container {
     padding-bottom: 0;
     border-bottom: 0;
@@ -147,7 +147,7 @@ let router = useRouter();
   .clip {
     position: absolute;
     z-index: 1;
-    bottom: -3%;
+    bottom: -5%;
     svg {
       display: block;
     }
@@ -201,6 +201,13 @@ section.article {
   }
 }
 
+@media (max-width: 800px) {
+  .manzo {
+    .clip {
+      bottom: -7%;
+    }
+  }
+}
 @media (max-width: 500px) {
   section.intro {
     .maintext {
@@ -214,6 +221,10 @@ section.article {
           font-size: 25px;
         }
       }
+    }
+
+    .clip {
+      bottom: -10%;
     }
   }
   section.article {

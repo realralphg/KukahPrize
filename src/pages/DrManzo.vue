@@ -171,14 +171,14 @@ let router = useRouter();
 
 <style lang="scss" scoped>
 .manzo {
-  background: url("../assets/manzo.png") no-repeat -100% center/cover;
+  background: url("../assets/manzo.png") no-repeat center center/cover;
   position: relative;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  margin-top: -5%;
   .container {
     padding-bottom: 0;
     border-bottom: 0;
@@ -201,7 +201,7 @@ let router = useRouter();
   .clip {
     position: absolute;
     z-index: 1;
-    bottom: 0%;
+    bottom: -5%;
     width: 100%;
     left: 0;
     svg {
@@ -278,6 +278,13 @@ section.article {
   }
 }
 
+@media (max-width: 800px) {
+  .manzo {
+    .clip {
+      bottom: -7%;
+    }
+  }
+}
 @media (max-width: 500px) {
   section.intro {
     .maintext {
@@ -291,6 +298,9 @@ section.article {
           font-size: 25px;
         }
       }
+    }
+    .clip {
+      bottom: -10%;
     }
   }
   section.article {
