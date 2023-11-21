@@ -1588,8 +1588,11 @@ footer {
   }
 }
 @media (max-width: 600px) {
-  section.event .grid img {
-    width: 200px;
+  // section.event .grid img {
+  //   width: 200px;
+  // }
+  section.event .div {
+    padding-bottom: 1rem;
   }
 
   section.winners nav ul li .q-btn {

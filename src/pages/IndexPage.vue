@@ -108,9 +108,9 @@
                       width: 38.596px;
                       height: 38.596px;
                       border-radius: 50%;
-                      display:flex;
-                      justify-content:center;
-                      align-items-center
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
                     "
                     ><img
                       style="width: 30.596px; height: 30.596px"
@@ -721,9 +721,34 @@
                 <img :src="`/images/${judge.img}`" alt="" />
                 <img src="../assets/angle.svg" alt="" />
               </div>
-              <div>
+              <div class="q-mt-xs">
                 <h4 class="name">{{ judge.name }}</h4>
                 <p>{{ judge.role }}</p>
+                <q-btn
+                  @click="toggleSpeaker(judge)"
+                  class="read_more_ q-mt-xs"
+                  flat
+                  no-wrap
+                  text-color="white"
+                  no-caps
+                >
+                  Read more
+                  <span
+                    class="bg-secondary spann q-ml-md"
+                    style="
+                      width: 38.596px;
+                      height: 38.596px;
+                      border-radius: 50%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                    ><img
+                      style="width: 30.596px; height: 30.596px"
+                      src="../assets/arrow.svg"
+                      alt=""
+                  /></span>
+                </q-btn>
               </div>
             </SplideSlide>
           </Splide>
@@ -809,6 +834,21 @@
         </q-btn>
       </q-card>
     </q-dialog>
+    <q-dialog class="dialog" v-model="speakersModal">
+      <q-card class="dialog_card" style="position: relative">
+        <SpeakersComp :data="speakersObj" />
+
+        <q-btn
+          flat
+          @click="speakersModal = false"
+          no-wrap
+          no-caps
+          style="position: absolute; top: 1%; right: 1%"
+        >
+          <i style="font-size: 1.5rem" class="fa-solid fa-xmark"></i>
+        </q-btn>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -818,6 +858,7 @@ import "@splidejs/vue-splide/css";
 import FooterCompVue from "src/components/FooterComp.vue";
 import SlidesComp from "src/components/SlidesComp.vue";
 import PartnersComp from "src/components/PartnersComp.vue";
+import SpeakersComp from "src/components/SpeakersComp.vue";
 import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import RalphsModal from "src/components/RalphsModal.vue";
@@ -825,8 +866,10 @@ import WinnersComp from "src/components/WinnersComp.vue";
 let ralphsModal = ref(false);
 let judesModal = ref(false);
 let winnersModal = ref(false);
+let speakersModal = ref(false);
 let carou_slide = ref(1);
 let winnerObj = ref({});
+let speakersObj = ref({});
 let options = ref({
   rewind: true,
   gap: 30,
@@ -855,28 +898,44 @@ let judges = ref([
     name: "Aramide Abe",
     role: "Executive Director, Naija Startups",
     img: "judge2.png",
+    desc: [
+      "Aramide is a British-Nigerian woman on a mission to influence the private sector in emerging economies and boost their macroeconomic development through entrepreneurship and job creation. She lives and works in Europe, managing a €7.5m multi-donor fund to invest in and strengthen entrepreneurship in Africa, specifically in Climate Adaptation, working with a global multilateral development bank. She does this through establishing strategic partnerships, mobilising funding and working with African governments to improve legal and regulatory frameworks for enabling business environments. While in Africa, the entrepreneur platform (Naija Startups) she co-founded in 2016 has scaled rapidly to a 95,000-member hub for SMEs and is impacting thousands of entrepreneurs in the areas of investment readiness, access to opportunities, capacity-building and programs.",
+    ],
   },
   {
-    name: "Robert",
-    role: "Executive Director, Naija Startups",
-    img: "judge2.png",
+    name: "Robert John",
+    role: "Software Engineer",
+    img: "robert.jpeg",
+    desc: [
+      "Robert has worked with databases and developed enterprise software for over a decade. He currently works with all things data, from engineering to visualization and Machine Learning. He recently started working with embedded systems and TinyML and is eager to see widespread adoption of embedded systems in Africa. He contributes to the developer ecosystem by speaking at events, hosting meetups and code labs, and tutorials. He also writes articles on Hackster.io, Medium, and his personal blog about data visualization, ML, and Google Cloud Platform (GCP). He is a mentor at the Google for Startups Africa Accelerator programme, and is a co-organizer of the GDG Cloud developer community in Kaduna, Nigeria.",
+    ],
   },
 
   {
     name: "Obi Brown",
     role: "Founder of JuniorX Innovation Academy.",
     img: "judge4.png",
+    desc: [
+      `Obi Brown is the founder of JuniorX Innovation Academy, which is an afterschool enrichment space where kids (8-16) are taken through a word class curriculum in science, electronics, robotics and computing with the objective of helping them improve critical thinking, creativity, innovation and problem solving "www.juniorx.academy".`,
+      `He is the COO StudyLab360 which is a company wholly owned by Tech Vibes int. ltd. A transactions and services company working with various government entities and departments to help payroll and revenue transactions. Studylab360.com was acquired under this arrangement and I continued my role leading product vision and execution. (www.studylab360.com)`,
+    ],
   },
   {
     name: "Mercy Markus",
     role: "Software Engineer on Microsoft's Mixed Reality Team.",
     img: "judge1.png",
+    desc: [
+      `Mercy is a civil engineering graduate who got perplexed about how most processes involved in the construction industry were still quite manual and repetitive. She made a switch and started by learning about data science and machine learning whilst leveraging cloud technologies along the way. Previously, she worked remotely as a Data Scientist for a Nigerian FinTech company. She currently works as a Software Engineer on Microsoft's Mixed Reality Team.`,
+    ],
   },
 
   {
     name: "Abubakar Nur Khalil",
     role: "CEO & CTO at Recursive Capital.",
     img: "judge3.png",
+    desc: [
+      `Abubakar is a Nigerian programmer, Bitcoin core contributor, and CEO & CTO at Recursive Capital. He is passionate about growing the Bitcoin development ecosystem in Africa and, along with his fellow Bitcoiners, launched Qala—a program designed to train the next generation of African Bitcoin and Lightning developers. He also serves as a board member of ₿Trust, where he is currently focusing on "building the future of Bitcoin and launching Africa into the forefront of the monetary revolution".`,
+    ],
   },
 ]);
 let ralphsData = ref({
@@ -945,9 +1004,13 @@ let winners = ref([
   },
 ]);
 
-const toggleWinner = (winner) => {
-  winnerObj.value = winner;
+const toggleWinner = (person) => {
+  winnerObj.value = person;
   winnersModal.value = true;
+};
+const toggleSpeaker = (person) => {
+  speakersObj.value = person;
+  speakersModal.value = true;
 };
 
 onMounted(() => {
