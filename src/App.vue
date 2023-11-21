@@ -8,13 +8,12 @@
 <script setup>
 import { onMounted } from "vue";
 import logo from "./assets/logo.svg";
-name: "App",
-  onMounted(() => {
-    // PRELOADING
-    const loadingElement = document.querySelector("[data-loading]");
-    window.addEventListener("load", function () {
-      loadingElement.classList.add("loaded");
-      document.body.classList.remove("active");
-    });
+onMounted(() => {
+  // PRELOADING
+  const loadingElement = document.querySelector("[data-loading]");
+  window.addEventListener("load", function () {
+    loadingElement.classList.add("loaded");
+    document.body.classList.remove("active");
   });
+});
 </script>

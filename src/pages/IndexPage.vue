@@ -9,9 +9,8 @@
             young innovators
           </h1>
           <p class="paragraphText">
-            An award of recognition for outstanding young Africans innovators
-            <br />
-            in the field of technology .
+            An award of recognition for outstanding young Africans innovators in
+            the field of technology .
           </p>
 
           <div class="getstarted">
@@ -20,12 +19,12 @@
             </q-btn>
           </div>
 
-          <div class="smallImgs">
+          <!-- <div class="smallImgs">
             <img src="../assets/herosmall1.png" alt="" />
             <img src="../assets/herosmall2.png" alt="" />
             <img src="../assets/herosmall3.png" alt="" />
             <img src="../assets/herosmall4.png" alt="" />
-          </div>
+          </div> -->
         </div>
 
         <div>
@@ -47,7 +46,7 @@
         <h5 data-reveal class="subtext">
           THE KUKAH PRIZE FOR YOUNG INNOVATORS
         </h5>
-        <p data-reveal>
+        <p class="p" data-reveal>
           An Award of recognition for outstanding innovators in the field of
           technology presented to young Africans who show exceptional promise as
           a developing leader in digital transformation. Bright young minds with
@@ -60,7 +59,7 @@
       </div>
 
       <div class="video_area">
-        <iframe
+        <!-- <iframe
           width="100%"
           height="415"
           src="https://www.youtube.com/embed/l4bDjU-48lE?si=gES7V7GDufU1gjPw"
@@ -68,7 +67,73 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
+        <q-carousel
+          class="carousel_"
+          animated
+          v-model="carou_slide"
+          arrows
+          autoplay
+          infinite
+        >
+          <q-carousel-slide
+            v-for="(winner, index) in winners"
+            :key="index"
+            :name="index + 1"
+            :img-src="`/images/${winner.img}`"
+          >
+            <div class="carou_div">
+              <p class="placeText text-white">{{ winner.placement }}</p>
+
+              <div>
+                <h6 class="paragraphText q-mb-xs text-white">
+                  {{ winner.name }}
+                </h6>
+
+                <p class="paragraphsmallText text-white">
+                  {{ winner.position }}
+                </p>
+
+                <q-btn
+                  @click="toggleWinner(winner)"
+                  class="read_more_"
+                  flat
+                  no-wrap
+                  no-caps
+                >
+                  Read more
+                  <span
+                    class="bg-secondary spann q-ml-md"
+                    style="
+                      width: 38.596px;
+                      height: 38.596px;
+                      border-radius: 50%;
+                      display:flex;
+                      justify-content:center;
+                      align-items-center
+                    "
+                    ><img
+                      style="width: 30.596px; height: 30.596px"
+                      src="../assets/arrow.svg"
+                      alt=""
+                  /></span>
+                </q-btn>
+              </div>
+            </div>
+          </q-carousel-slide>
+          <!-- <q-carousel-slide
+            :name="2"
+            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+          />
+          <q-carousel-slide
+            :name="3"
+            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+          />
+          <q-carousel-slide
+            :name="4"
+            img-src="https://cdn.quasar.dev/img/quasar.jpg"
+          /> -->
+        </q-carousel>
       </div>
     </section>
 
@@ -109,7 +174,7 @@
               /></span>
             </q-btn>
           </div>
-          <div class="right">
+          <div class="right pseu">
             <img data-reveal src="../assets/bish.png" alt="" />
           </div>
         </div>
@@ -160,7 +225,7 @@
               /></span>
             </q-btn>
           </div>
-          <div class="right">
+          <div class="right pseu">
             <img data-reveal src="../assets/manzo.png" alt="" />
           </div>
         </div>
@@ -171,7 +236,7 @@
       <div class="container">
         <div class="text-center">
           <h2 class="maintext text-white">
-            The<span data-reveal class="text-secondary"> Event </span
+            Maiden<span data-reveal class="text-secondary"> Edition </span
             ><img src="../assets/theevent.svg" alt="" />
           </h2>
         </div>
@@ -191,21 +256,22 @@
             </p>
           </div>
           <div class="right">
-            <img data-reveal src="../assets/kuk9.jpeg" alt="" />
+            <img data-reveal src="/images/kuk7.jpeg" alt="" />
           </div>
           <div class="div">
-            <div class="one">
-              <img data-reveal src="../assets/kuk8.jpeg" alt="" />
+            <SlidesComp />
+            <!-- <div class="one">
+              <img data-reveal src="/images/kuk8.jpeg" alt="" />
             </div>
             <div class="two">
-              <img data-reveal src="../assets/kuk7.jpeg" alt="" />
+              <img data-reveal src="/images/kuk9.jpeg" alt="" />
             </div>
             <div class="three">
               <img data-reveal src="../assets/drmanzo.jpeg" alt="" />
             </div>
             <div class="four">
-              <img data-reveal src="../assets/kuk1.jpeg" alt="" />
-            </div>
+              <img data-reveal src="/images/kuk1.jpeg" alt="" />
+            </div> -->
           </div>
         </div>
       </div>
@@ -221,43 +287,43 @@
         </div>
         <div data-reveal class="grid-wrapper">
           <div>
-            <img src="../assets/kuk1.jpeg" alt="" />
+            <img src="/images/kuk1.jpeg" alt="" />
           </div>
           <div>
-            <img src="../assets/kuk2.jpeg" alt="" />
+            <img src="/images/kuk2.jpeg" alt="" />
           </div>
           <div class="tall">
-            <img src="../assets/kuk8.jpeg" alt="" />
+            <img src="/images/kuk8.jpeg" alt="" />
           </div>
           <div class="wide">
             <img src="../assets/gmid.png" alt="" />
           </div>
           <div>
-            <img src="../assets/kuk8.jpeg" alt="" />
+            <img src="/images/kuk8.jpeg" alt="" />
           </div>
           <div class="tall">
-            <img src="../assets/kuk1.jpeg" alt="" />
+            <img src="/images/kuk1.jpeg" alt="" />
           </div>
           <div class="">
             <img src="../assets/gmid1.png" alt="" />
           </div>
           <div>
-            <img src="/images/win1.jpeg" alt="" />
+            <img src="/images/winner1.jpeg" alt="" />
           </div>
           <div class="wide">
-            <img src="../assets/kuk7.jpeg" alt="" />
+            <img src="/images/kuk7.jpeg" alt="" />
           </div>
           <div class="big">
-            <img src="../assets/kuk3.jpeg" alt="" />
+            <img src="/images/kuk3.jpeg" alt="" />
           </div>
           <div class="tall">
             <img src="../assets/drmanzo.jpeg" alt="" />
           </div>
           <div>
-            <img src="../assets/kuk9.jpeg" alt="" />
+            <img src="/images/kuk9.jpeg" alt="" />
           </div>
           <div>
-            <img src="../assets/kuk10.jpeg" alt="" />
+            <img src="/images/kuk10.jpeg" alt="" />
           </div>
 
           <div>
@@ -315,7 +381,7 @@
               /></span>
             </q-btn>
           </div>
-          <div class="right">
+          <div class="right pseu">
             <img src="../assets/ralph.png" alt="" />
           </div>
         </div>
@@ -334,7 +400,7 @@
         </div>
       </div>
     </section>
-    <section id="winners" class="winners">
+    <!-- <section id="winners" class="winners">
       <div class="container">
         <div class="text-center">
           <h2 class="maintext text-white">
@@ -420,7 +486,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="press honorary">
       <div class="container">
@@ -428,7 +494,8 @@
           <h2 class="maintext text-center text-primary">
             <span data-reveal class="text-primary text-center">
               Honorary <br />
-              award of recognition </span
+              award of recognition <br />
+              <span class="text-secondary">2022</span> </span
             ><img src="../assets/recog.svg" alt="" />
           </h2>
         </div>
@@ -464,7 +531,7 @@
               /></span>
             </q-btn>
           </div>
-          <div class="right">
+          <div class="right pseu">
             <img src="../assets/jude.png" alt="" />
           </div>
         </div>
@@ -485,7 +552,7 @@
       </div>
     </section>
 
-    <section class="event centre">
+    <!-- <section class="event centre">
       <div class="container">
         <div class="text-center">
           <h2 class="maintext text-white">
@@ -534,7 +601,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="event started">
       <div class="container">
         <div class="text-center">
@@ -687,7 +754,7 @@
               <h6 data-reveal>
                 Tap Into The Potentials of a
                 <strong>$5,000,000,000,000,</strong>
-                RalphsModal INDUSTRY
+                INDUSTRY
               </h6>
             </div>
           </div>
@@ -749,6 +816,7 @@
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
 import FooterCompVue from "src/components/FooterComp.vue";
+import SlidesComp from "src/components/SlidesComp.vue";
 import PartnersComp from "src/components/PartnersComp.vue";
 import { onMounted, ref } from "vue";
 import gsap from "gsap";
@@ -757,6 +825,7 @@ import WinnersComp from "src/components/WinnersComp.vue";
 let ralphsModal = ref(false);
 let judesModal = ref(false);
 let winnersModal = ref(false);
+let carou_slide = ref(1);
 let winnerObj = ref({});
 let options = ref({
   rewind: true,
@@ -783,24 +852,31 @@ let options = ref({
 });
 let judges = ref([
   {
-    name: "Mercy Markus",
-    role: "Software Engineer on Microsoft's Mixed Reality Team.",
-    img: "judge1.png",
-  },
-  {
     name: "Aramide Abe",
     role: "Executive Director, Naija Startups",
     img: "judge2.png",
   },
   {
-    name: "Abubakar Nur Khalil",
-    role: "CEO & CTO at Recursive Capital.",
-    img: "judge3.png",
+    name: "Robert",
+    role: "Executive Director, Naija Startups",
+    img: "judge2.png",
   },
+
   {
     name: "Obi Brown",
     role: "Founder of JuniorX Innovation Academy.",
     img: "judge4.png",
+  },
+  {
+    name: "Mercy Markus",
+    role: "Software Engineer on Microsoft's Mixed Reality Team.",
+    img: "judge1.png",
+  },
+
+  {
+    name: "Abubakar Nur Khalil",
+    role: "CEO & CTO at Recursive Capital.",
+    img: "judge3.png",
   },
 ]);
 let ralphsData = ref({
@@ -830,7 +906,7 @@ let drJude = ref({
 
 let winners = ref([
   {
-    img: "win1.jpeg",
+    img: "winner1.jpeg",
     video_link: "https://www.youtube.com/embed/kMDbBc7rMZ8?si=tkhLc2ns_azncbUu",
     placement: "1st place",
     name: "Esther Olalude",
@@ -843,7 +919,7 @@ let winners = ref([
     ],
   },
   {
-    img: "win2.png",
+    img: "winner2.jpeg",
     video_link: "https://www.youtube.com/embed/kMDbBc7rMZ8?si=tkhLc2ns_azncbUu",
     placement: "2nd place",
     name: "Rebecca Adeosun",
@@ -856,7 +932,7 @@ let winners = ref([
   },
 
   {
-    img: "win1.png",
+    img: "winner3.jpeg",
     video_link: "https://www.youtube.com/embed/kMDbBc7rMZ8?si=tkhLc2ns_azncbUu",
     placement: "3rd place",
     name: "Johnson Jaiyeola, with Paul Jaiyeola & Oreoluwa Adetoro",
@@ -907,15 +983,15 @@ onMounted(() => {
     opacity: 0,
     y: -40,
   });
-  document.querySelectorAll(".smallImgs img").forEach((image, index) => {
-    // console.log(image);
-    tl.from(image, {
-      duration: index === 0 ? 1 * 0.4 : index * 0.4,
-      ease: "power2. out",
-      opacity: 0,
-      x: -40,
-    });
-  });
+  // document.querySelectorAll(".smallImgs img").forEach((image, index) => {
+  //   // console.log(image);
+  //   tl.from(image, {
+  //     duration: index === 0 ? 1 * 0.4 : index * 0.4,
+  //     ease: "power2. out",
+  //     opacity: 0,
+  //     x: -40,
+  //   });
+  // });
 
   /**
    * SCROLL REVEAL

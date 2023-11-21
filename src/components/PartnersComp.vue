@@ -45,9 +45,17 @@
             </p>
           </div>
           <div class="btn_links">
-            <a href=""><img src="../assets/fb.svg" alt="" /></a>
-            <a href=""><img src="../assets/tw.svg" alt="" /></a>
-            <a href=""><img src="../assets/in.svg" alt="" /></a>
+            <a target="_blank" href="https://web.facebook.com/thekukahprize/"
+              ><img src="../assets/fb.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://twitter.com/thekukahprize"
+              ><img src="../assets/tw.svg" alt=""
+            /></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/the-kukah-prize/"
+              ><img src="../assets/in.svg" alt=""
+            /></a>
           </div>
 
           <p class="q-mt-lg">@thekukahprize</p>
@@ -61,10 +69,13 @@
         <h3 class="h3">Partners</h3>
 
         <div style="gap: 3rem" class="row justify-center items-center">
+          <img src="../assets/kukahcenter.png" alt="" />
           <img src="../assets/logo1.svg" alt="" />
-          <img src="../assets/logo2.svg" alt="" />
-          <img src="../assets/logo3.svg" alt="" />
+          <!-- <img src="../assets/logo6.svg" alt="" /> -->
           <img src="../assets/logo4.svg" alt="" />
+          <img src="../assets/logo6.png" alt="" />
+          <img src="../assets/logo2.svg" alt="" />
+          <!-- <img src="../assets/logo3.svg" alt="" /> -->
         </div>
       </div>
     </div>

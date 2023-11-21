@@ -73,7 +73,8 @@ p {
 
 section {
   padding: 150px 0;
-  margin-top: -0.5%;
+  // overflow: hidden;
+  margin-top: -0.7%;
 }
 
 .grid {
@@ -83,9 +84,35 @@ section {
   gap: 2rem;
 
   .right {
+    position: relative;
     img {
       max-height: 500px;
       object-fit: contain;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .right.pseu {
+    &::before {
+      content: "";
+      position: absolute;
+      background: #dca236;
+      width: 200px;
+      height: 100px;
+      right: 0%;
+      z-index: 1;
+      top: -10%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: #dca236;
+      width: 200px;
+      z-index: 1;
+      height: 100px;
+      left: 0%;
+      bottom: -10%;
     }
   }
 }
@@ -177,14 +204,17 @@ section {
 .paragraphText {
   color: #fff;
   font-size: 20px;
+  max-width: 700px;
   font-weight: 700;
-  line-height: 196%; /* 39.2px */
+  line-height: 1.2; /* 39.2px */
+  // line-height: 196%; /* 39.2px */
 }
 .paragraphsmallText {
   color: #fff;
   font-size: 12px;
   font-weight: 400;
-  line-height: 196%; /* 39.2px */
+  line-height: 1.4; /* 39.2px */
+  // line-height: 196%; /* 39.2px */
 }
 
 .placeText {
@@ -373,6 +403,7 @@ header .navbar ul {
   height: 100px;
   width: 100%;
   background: #dca236;
+  margin-top: -0.1%;
 }
 .hero .centerimg img {
   width: 146px;
@@ -384,6 +415,38 @@ header .navbar ul {
   background: #1b3459;
   position: absolute;
 }
+p {
+  margin-bottom: 0;
+}
+.carousel_ {
+  position: relative;
+  height: 70vh;
+  .placeText {
+    line-height: unset;
+  }
+  .carou_div {
+    background: rgba(0, 0, 0, 0.75);
+    max-width: 400px;
+    position: absolute;
+    bottom: 2%;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  span.spann {
+    position: relative;
+  }
+
+  .read_more_ {
+    color: white;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
 
 // section
 
@@ -391,7 +454,7 @@ section > div h2,
 section > div h5 {
   margin: 0.5rem 0;
 }
-section.intro > div p {
+section.intro > div p.p {
   max-width: 70%;
   margin: 0 auto;
 }
@@ -472,12 +535,14 @@ section.icon {
 section.quotes {
   background: #1b3459;
   position: relative;
-  padding: 150px 0 170px;
+  padding: 50px 0 70px;
+  // padding: 150px 0 170px;
   .quote {
     border-top: 2.016px solid #ffc655;
     border-bottom: 2.016px solid #ffc655;
     position: relative;
-    padding: 120px 0;
+    padding: 70px 0 !important;
+    // padding: 120px 0;
 
     h3 {
       text-align: center;
@@ -488,28 +553,26 @@ section.quotes {
     p {
       text-align: center;
     }
-    &::before {
-      content: "";
-      height: 4.039px;
-      // height: 5.039px;
-      width: 131.477px;
-      // width: 191.477px;
-      position: absolute;
-      background: #dca236;
-      top: -10%;
-      left: 45%;
-      transform: rotate(90deg) translateX(-50%);
-    }
-    &::after {
-      content: "";
-      height: 4.039px;
-      width: 131.477px;
-      background: #dca236;
-      position: absolute;
-      bottom: -43%;
-      left: 45%;
-      transform: rotate(90deg) translateX(-50%);
-    }
+    // &::before {
+    //   content: "";
+    //   height: 4.039px;
+    //   width: 131.477px;
+    //   position: absolute;
+    //   background: #dca236;
+    //   top: -10%;
+    //   left: 45%;
+    //   transform: rotate(90deg) translateX(-50%);
+    // }
+    // &::after {
+    //   content: "";
+    //   height: 4.039px;
+    //   width: 131.477px;
+    //   background: #dca236;
+    //   position: absolute;
+    //   bottom: -43%;
+    //   left: 45%;
+    //   transform: rotate(90deg) translateX(-50%);
+    // }
 
     img {
       width: 40px;
@@ -581,6 +644,13 @@ section.event {
       // width: 250px;
       height: 250px;
       object-fit: cover;
+      object-position: 80% 20%;
+    }
+    img.addPosition {
+      // width: 250px;
+      height: 250px;
+      object-fit: cover;
+      object-position: top;
     }
   }
 
@@ -590,12 +660,15 @@ section.event {
   }
   .right {
     grid-area: img;
+    position: relative;
+
     img {
       height: auto;
       max-height: 500px;
       object-fit: contain;
     }
   }
+
   .div {
     grid-area: div;
     display: flex;
@@ -603,9 +676,9 @@ section.event {
     overflow-x: scroll;
     gap: 1.5rem;
 
-    img {
-      max-width: 300px;
-    }
+    // img {
+    //   max-width: 300px;
+    // }
   }
   // .two {
   //   grid-area: imgTwo;
@@ -719,7 +792,8 @@ section.press {
 }
 
 section.quotes.tw {
-  padding: 210px 0;
+  padding: 100px 0;
+  // padding: 210px 0;
 }
 section.winners {
   background: #1b3459;
@@ -937,6 +1011,11 @@ section.event.vr {
     width: 150px;
     height: 150px;
     object-fit: contain;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  img:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -1393,6 +1472,14 @@ footer {
   .grid,
   section.event.started .lists .grid {
     grid-template-columns: 1fr;
+  }
+
+  .grid {
+    gap: 4rem;
+  }
+
+  section.intro > div p.p {
+    max-width: 90%;
   }
   section.event.started .lists .grid {
     grid-template-areas: unset !important;

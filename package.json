@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@splidejs/vue-splide": "^0.6.12",
     "axios": "^1.2.1",
     "core-js": "^3.6.5",

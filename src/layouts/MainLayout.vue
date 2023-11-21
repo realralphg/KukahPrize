@@ -28,11 +28,11 @@
                   Introduction
                 </q-btn>
               </li>
-              <li v-if="this.$router.currentRoute.value.name === 'home'">
+              <!-- <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('winners')" class="nav_item" flat no-caps>
                   The winners
                 </q-btn>
-              </li>
+              </li> -->
               <li v-if="this.$router.currentRoute.value.name === 'home'">
                 <q-btn @click="goto('event')" class="nav_item" flat no-caps>
                   Event
