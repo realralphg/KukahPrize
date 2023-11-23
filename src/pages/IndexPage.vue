@@ -308,7 +308,7 @@
             <img src="../assets/gmid1.png" alt="" />
           </div>
           <div>
-            <img src="/images/winner1.jpeg" alt="" />
+            <img src="/images/winner1.jpg" alt="" />
           </div>
           <div class="wide">
             <img src="/images/kuk7.jpeg" alt="" />
@@ -317,7 +317,7 @@
             <img src="/images/kuk3.jpeg" alt="" />
           </div>
           <div class="tall">
-            <img src="../assets/drmanzo.jpeg" alt="" />
+            <img src="/images/drmanzo.jpeg" alt="" />
           </div>
           <div>
             <img src="/images/kuk9.jpeg" alt="" />
@@ -965,8 +965,8 @@ let drJude = ref({
 
 let winners = ref([
   {
-    img: "winner1.jpeg",
-    video_link: "https://www.youtube.com/embed/kMDbBc7rMZ8?si=tkhLc2ns_azncbUu",
+    img: "winner1.jpg",
+    video_link: "https://www.youtube.com/embed/QOJigpZsevQ?si=Db3_Ad-4hlU5nfkW",
     placement: "1st place",
     name: "Esther Olalude",
     name1: "Esther Olalude (Age 20)",
@@ -978,8 +978,8 @@ let winners = ref([
     ],
   },
   {
-    img: "winner2.jpeg",
-    video_link: "https://www.youtube.com/embed/kMDbBc7rMZ8?si=tkhLc2ns_azncbUu",
+    img: "winner2.jpg",
+    video_link: "https://www.youtube.com/embed/lHJHcvIG8ek?si=pIcoiycnHzlVY0cF",
     placement: "2nd place",
     name: "Rebecca Adeosun",
     name1: "Rebecca Adeosun (Age 26)",
@@ -991,7 +991,7 @@ let winners = ref([
   },
 
   {
-    img: "winner3.jpeg",
+    img: "winner3.jpg",
     video_link: "https://www.youtube.com/embed/kMDbBc7rMZ8?si=tkhLc2ns_azncbUu",
     placement: "3rd place",
     name: "Johnson Jaiyeola, with Paul Jaiyeola & Oreoluwa Adetoro",

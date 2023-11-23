@@ -43,7 +43,7 @@
 
       <div>
         <p>
-          he institution of this award that is done in collaboration with The
+          The institution of this award that is done in collaboration with The
           Kukah Centre is a clear recognition of the national and global status
           of Bishop Matthew Hassan Kukah as not only a quintessential
           intellectual but a promoter of new modern trends in resolving the
@@ -171,8 +171,10 @@ let router = useRouter();
 
 <style lang="scss" scoped>
 .manzo {
-  background: url("../assets/manzo.png") no-repeat center center/cover;
+  background: url("../assets/manzo.png") no-repeat;
   position: relative;
+  background-size: cover;
+  background-position: 80% 15%;
   height: 80vh;
   display: flex;
   justify-content: center;

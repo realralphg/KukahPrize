@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="gap: 2rem" class="column items-start no-wrap">
-      <div class="q-mt-lg">
+      <div class="q-mt-lg winne">
         <iframe
           width="100%"
           height="300"
@@ -93,7 +93,9 @@ section.manzo {
 .img_ralph {
   max-width: 350px;
 }
-
+.winne {
+  background: #e4e4e4;
+}
 @media (max-width: 500px) {
   p {
     font-size: 12px;

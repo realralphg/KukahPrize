@@ -30,7 +30,7 @@
       aria-label="My Favorite Images"
     >
       <SplideSlide v-for="(card, index) in cards" :key="index">
-        <img :class="index === 6 ? 'addPosition' : ''" :src="card.img" alt="" />
+        <img :class="index === 7 ? 'addPosition' : ''" :src="card.img" alt="" />
       </SplideSlide>
     </Splide>
   </div>
@@ -54,35 +54,66 @@ export default {
           img: "/images/kuk1.jpeg",
         },
         {
+          img: "/images/event13.jpg",
+        },
+        {
+          img: "/images/event11.jpg",
+        },
+        {
+          img: "/images/event14.jpg",
+        },
+        {
+          img: "/images/drmanzo.jpeg",
+        },
+
+        // {
+        //   img: "/images/kuk3.jpeg",
+        // },
+        {
           img: "/images/kuk2.jpeg",
         },
         {
-          img: "/images/kuk3.jpeg",
+          img: "/images/event15.jpg",
+        },
+
+        {
+          img: "/images/event3.jpeg",
+        },
+        {
+          img: "/images/event12.jpg",
         },
         {
           img: "/images/kuk8.jpeg",
         },
+
+        // {
+        //   img: "/images/event4.jpeg",
+        // },
         {
           img: "/images/event1.jpeg",
+        },
+        {
+          img: "/images/winner1.jpg",
+        },
+        {
+          img: "/images/winner2.jpg",
+        },
+        {
+          img: "/images/winner3.jpg",
         },
         {
           img: "/images/event2.jpeg",
         },
         {
-          img: "/images/event3.jpeg",
+          img: "/images/event8.jpg",
         },
         {
-          img: "/images/event4.jpeg",
+          img: "/images/event9.jpg",
         },
         {
-          img: "/images/winner1.jpeg",
+          img: "/images/event10.jpg",
         },
-        {
-          img: "/images/winner2.jpeg",
-        },
-        {
-          img: "/images/winner3.jpeg",
-        },
+
         // {
         //   img: "/images/kuk1.jpeg",
         // },
@@ -95,4 +126,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+// img {
+//   border-radius: 3px;
+// }
+</style>
