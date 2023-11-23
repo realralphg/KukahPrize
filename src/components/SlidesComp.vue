@@ -104,9 +104,9 @@ export default {
         {
           img: "/images/event2.jpeg",
         },
-        {
-          img: "/images/event8.jpg",
-        },
+        // {
+        //   img: "/images/event8.jpg",
+        // },
         {
           img: "/images/event9.jpg",
         },

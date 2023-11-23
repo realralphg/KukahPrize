@@ -296,7 +296,7 @@
             <img src="/images/kuk8.jpeg" alt="" />
           </div>
           <div class="wide">
-            <img src="../assets/gmid.png" alt="" />
+            <img src="/images/event12.jpg" alt="" />
           </div>
           <div>
             <img src="/images/kuk8.jpeg" alt="" />
