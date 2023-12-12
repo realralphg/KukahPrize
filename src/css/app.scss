@@ -99,7 +99,7 @@ section {
       content: "";
       position: absolute;
       background: #dca236;
-      width: 200px;
+      width: 150px;
       height: 100px;
       right: 0%;
       z-index: 1;
@@ -109,7 +109,7 @@ section {
       content: "";
       position: absolute;
       background: #dca236;
-      width: 200px;
+      width: 150px;
       z-index: 1;
       height: 100px;
       left: 0%;
@@ -478,7 +478,28 @@ section.intro {
   .video_area {
     max-width: 1064.559px;
     width: 80%;
-    margin: 2rem auto 0;
+    margin: 5rem auto 0;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background: #dca236;
+      width: 120px;
+      height: 80px;
+      left: 0%;
+      z-index: -1;
+      top: -10%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: #dca236;
+      width: 120px;
+      z-index: -1;
+      height: 80px;
+      right: 0%;
+      bottom: -10%;
+    }
   }
 }
 
@@ -1289,6 +1310,12 @@ footer {
     font-size: 16px;
   }
 }
+@media (min-width: 1300px) {
+  .grid-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 1100px) {
   // typography
 
@@ -1595,7 +1622,20 @@ footer {
   section.event .div {
     padding-bottom: 1rem;
   }
+  .grid {
+    display: grid;
 
+    .right.pseu {
+      &::before {
+        width: 100px;
+        height: 80px;
+      }
+      &::after {
+        width: 100px;
+        height: 80px;
+      }
+    }
+  }
   section.winners nav ul li .q-btn {
     font-size: 16px;
   }
@@ -1654,6 +1694,18 @@ footer {
   section.press.honorary.partner {
     padding: 10px 0;
   }
+  section.intro {
+    .video_area {
+      &::before {
+        width: 90px;
+        height: 60px;
+      }
+      &::after {
+        width: 90px;
+        height: 60px;
+      }
+    }
+  }
 }
 @media (max-width: 500px) {
   section {
@@ -1671,6 +1723,18 @@ footer {
     }
     img:nth-child(2) {
       left: 0%;
+    }
+  }
+  section.intro {
+    .video_area {
+      &::before {
+        width: 90px;
+        height: 60px;
+      }
+      &::after {
+        width: 90px;
+        height: 60px;
+      }
     }
   }
   section.quotes .quote::after,

@@ -11,9 +11,18 @@
           <p>Website: thekukahprize.org</p>
 
           <div class="btn_links">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""> <i class="fa-brands fa-linkedin-in"></i></a>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a target="_blank" href="https://web.facebook.com/thekukahprize/"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/the-kukah-prize/"
+            >
+              <i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a target="_blank" href="https://twitter.com/thekukahprize"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
           </div>
         </div>
         <div>

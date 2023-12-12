@@ -244,18 +244,20 @@
         <div class="grid">
           <div class="left">
             <p data-reveal>
-              Bishop Kukah is one of Nigeria’s foremost public intellectuals who
-              has delivered numerous public lectures across Nigeria and
-              worldwide, written several books and hundreds of articles on
-              various aspects of governance, faith, human rights and public
-              policy in Nigeria. His contributions have added moral input,
-              shaped public policy and service. The bishop was responsible for
-              the negotiation and end of the long drawn out conflict between
-              Shell Petroleum Development Corporation and the people of
-              Ogoniland in Rivers State, Nigeria.
+              The Kukah Prize for Young Innovators serves as a homage to the
+              ingenuity of young African trailblazers spearheading the digital
+              revolution. It reveres their inventive solutions tackling both
+              local and global developmental hurdles, pivotal for propelling
+              Africa's future advancement. This esteemed occasion, marking its
+              inaugural ceremony at the Sheraton Hotel in Abuja on August 31st,
+              2022, stands as a significant milestone in Africa's progression.
+              Distinguished figures, encompassing former and present presidents,
+              governors, ministers, and esteemed stakeholders, convened to laud
+              these brilliant minds reshaping Africa's technological sphere and
+              addressing critical societal imperatives.
             </p>
           </div>
-          <div class="right">
+          <div class="right pseu">
             <img data-reveal src="/images/kuk7.jpeg" alt="" />
           </div>
           <div class="div">
